@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    private bool playerInZone;
+    //private bool playerInZone;
     public string levelToLoad;
 
 
     // Use this for initialization
-    void Start()
+    /*void Start()
     {
         playerInZone = false;
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

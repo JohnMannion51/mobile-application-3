@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
@@ -9,16 +10,15 @@ public class MainMenu : MonoBehaviour {
 
     public void NewGame()
     {
-        Application.LoadLevel("Tutorial");
+        SceneManager.LoadScene("Tutorial");
+        PlayerPrefs.SetInt("CurrentScore", 0);
     }
 
-    public void LevelSelect()
-    {
+    
 
-    }
-
-    public void quitGame()
+    public void QuitGame()
     {
+        Debug.Log("Game Exited");
         Application.Quit();
     }
 }
