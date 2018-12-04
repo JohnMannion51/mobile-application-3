@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour {
-
+    //use the levelManager
     public LevelManager levelManager;
 
     // Use this for initialization
@@ -21,8 +21,8 @@ public class Checkpoint : MonoBehaviour {
     {
         if (other.name == "red")
         {
-            levelManager.currentCheckpoint = gameObject;
-            Debug.Log("Activated Checkpoint" + transform.position);
+            levelManager.currentCheckpoint = gameObject;//resets the players current position to checkpoint when they die
+            Debug.Log("Activated Checkpoint" + transform.position);//used to test checkpoint during development and testing
         }
     }
 }
