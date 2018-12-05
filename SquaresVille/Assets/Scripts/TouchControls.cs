@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TouchControls : MonoBehaviour {
-
+    //using methods from PlayerController and PauseMenu
     private PlayerController thePlayer;
     private PauseMenu thePauseMenu;
 	// Use this for initialization
@@ -14,11 +14,11 @@ public class TouchControls : MonoBehaviour {
 	
 	public void Jump()
     {
-        thePlayer.Jump();
+        thePlayer.Jump();//the player hits the jump button
     }
 
     public void Pause()
     {
-        thePauseMenu.PauseUnpause();
+        thePauseMenu.PauseUnpause();//the player hits the pause button
     }
 }

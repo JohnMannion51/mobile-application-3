@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
-
+    //declared variable and UI interface for unity canvas
     public static int score;
     Text text;
 
@@ -12,10 +12,10 @@ public class ScoreManager : MonoBehaviour {
     {
         text = GetComponent<Text>();
         //score = 0;
-        score = PlayerPrefs.GetInt("CurrentScore");
+        score = PlayerPrefs.GetInt("CurrentScore");//gets the players current score
     }//start
 
-    void Update()
+    void Update()//updates the score
     {
         if (score < 0)
             score = 0;
@@ -23,16 +23,16 @@ public class ScoreManager : MonoBehaviour {
         text.text = "" + score;
     }//update
 
-    public static void AddPoints(int pointsToAdd)
+    public static void AddPoints(int pointsToAdd)//adds points to the player score and carries the score through the game
     {
         score += pointsToAdd;
         PlayerPrefs.SetInt("CurrentScore",score);
     }//addPoints
 
-    public static void Reset()
+    public static void Reset()//resets the score to zero 
     {
         score = 0;
         PlayerPrefs.SetInt("CurrentScore", score);
     }//reset
 
-}//class
+}//ScoreManager

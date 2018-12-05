@@ -30,16 +30,17 @@ public class LevelManager : MonoBehaviour {
     }//RespawnPlayer
 
     public IEnumerator RespawnPlayerCo()
-    {
+    {   //respawn and death particles along with the gravity scale are set in unity
+        //if the player is killed or falls off the screen it activates the death particle 
         Instantiate(deathParticle, player.transform.position, player.transform.rotation);
         gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
         player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         ScoreManager.AddPoints(-pointPenaltyOnDeath);
-        Debug.Log("Player Respawn");
+        Debug.Log("Player Respawn");//used to test respawn during development and testing
         yield return new WaitForSeconds (respawnDelay);
         player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
         player.transform.position = currentCheckpoint.transform.position;
-        
+        //if the player is killed or falls off the screen it resets player position to the checkpoint location 
         Instantiate(respawnParticle, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation);
 
     }

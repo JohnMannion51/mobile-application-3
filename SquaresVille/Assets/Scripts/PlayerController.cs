@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Start");
+        Debug.Log("Start");//used to test start during development and testing
         rb = GetComponent<Rigidbody2D>();
 
     }//start
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groungCheckRadius, whatIsGround);//player is in contact with the ground
-    }
+    }//FixedUpdate
 	
 	// Update is called once per frame
 	void Update ()
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
         {
             //rb .velocity = new Vector2(0, jumpHeight);
             Jump();
-        }
+        }//if
 
         if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)//using space bar to double jump while in development and pc testing
         {
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
             //rb.velocity = new Vector2(0, jumpHeight);
             Jump();
             doubleJump = true;
-        }
+        }//if
 
 //#endif       
     }//update
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
     public void Move(float moveInput)
     {
 
-    }
+    }//Move
 
     public void Jump()
     {
