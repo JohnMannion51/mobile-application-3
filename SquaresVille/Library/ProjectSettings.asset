@@ -551,11 +551,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_2D
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\jono-\Desktop\mobile-application-3\SquaresVille\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: John
+  metroCertificateIssuer: John
+  metroCertificateNotAfter: 805992e309acd501
   metroApplicationDescription: Template_2D
   wsaImages: {}
   metroTileShortName: 
